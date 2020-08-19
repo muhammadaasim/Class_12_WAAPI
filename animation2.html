@@ -20,13 +20,13 @@
     <script>
         var elem=document.querySelector('#box');
         elem.animate([
-            {transform:'translate(0,0)'},
-            {transform:'translate(600px,400px)'},
-            {transform:'translate(0,0)'},
-            // {transform:'translate(0,600px)'},
-            // {transform:'translate(0,0)'},
+            {transform:'translate(0,0)', background:'darkblue'},
+            {transform:'translate(400px,0)',background:'darkred'},
+            {transform:'translate(400px,400px)',background:'darkgreen'},
+            {transform:'translate(0,400px)',background:'yellow'},
+            {transform:'translate(0,0)',background:'darkblue'}
         ],{
-            duration:1700,
+            duration:4000,
             iterations:Infinity
         })
     </script>
