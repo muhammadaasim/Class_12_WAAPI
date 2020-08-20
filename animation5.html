@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('./images/road-bg2.jpg');
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            /* background-position-y:center; */
+            /* background-size: cover; */
+        }
+        #cloud{
+            margin-left:-50px;
+            margin-top:500px;
+            height: 150px;
+            width:auto;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/car.gif" id="cloud" />
+    <script>
+        var elem = document.querySelector('#cloud');
+
+        var animatedElem = elem.animate([
+            { transform: 'translate(0,0)' },
+            { transform: 'translate(1600px,0)' },
+            { transform: 'translate(0,0)' },
+        ], {
+            duration: 3000,
+        })
+
+        document.addEventListener("mousedown", ()=>{
+            animatedElem.pause();
+        })
+
+        document.addEventListener("mouseup", ()=>{
+            animatedElem.play();
+        })
+    </script>
+</body>
+
+</html>
